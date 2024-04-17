@@ -59,16 +59,6 @@ Class Api Request Php
 		print_r($response);
 
 
- - **Upload File:**
  
-		$urlApi = 'http://localhost:8080/';
-		$api = new  ApiRequest($urlApi);
-		$data = [
-			'file' => new  CURLFile('path/to/file.jpg')
-			];
-			
-		$response = $api->UploadFile('upload-file', $data);
-		
-		print_r($response);
 
 		
