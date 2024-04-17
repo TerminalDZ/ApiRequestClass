@@ -138,16 +138,7 @@ class ApiRequest {
 
 
 
-class CurlFile {
-    public $name;
-    public $mime;
-    public $postname;
-    public $file;
 
-    public function __construct($file) {
-        $this->file = $file;
-    }
-}
 
 
 
