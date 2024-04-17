@@ -10,7 +10,9 @@ Class Api Request Php
 
 		$api = new  ApiRequest($urlApi);
 
-		$response = $api->get('get-patient?id=1');
+		$response = $api->get('patients');
+
+		print_r($response);
 
  - **POST:**
 		
@@ -20,14 +22,14 @@ Class Api Request Php
 		$api = new  ApiRequest($urlApi);
 
 		$data = [
-			'username' => 'admin',
+			'name' => 'John Doe',
 
-			'password' => 'admin',
-
-			'remember' => 'true'
+			'age' => 30
 		];
 
-		$response = $api->post('login-account', $data);
+		$response = $api->post('add-patient', $data);
+		
+		print_r($response);
 
  - **PUT:**
 
@@ -36,14 +38,14 @@ Class Api Request Php
 		$api = new  ApiRequest($urlApi);
 
 		$data = [
-			'username' => 'wassim',
+			'name' => 'John Doe',
 
-			'password' => '123456',
-
-			'remember' => '1'
+			'age' => 25
 		];
 
-		$response = $api->post('login-account', $data);
+		$response = $api->put('patient/1', $data);
+		
+		print_r($response);
 
 
  - **DELET:**
@@ -52,18 +54,21 @@ Class Api Request Php
 
 		$api = new  ApiRequest($urlApi);
 		
-		$response = $api->delete('patients/1');
+		$response = $api->delete('patient/1');
+		
+		print_r($response);
 
 
  - **Upload File:**
  
 		$urlApi = 'http://localhost:8080/';
 		$api = new  ApiRequest($urlApi);
-		
 		$data = [
 			'file' => new  CURLFile('path/to/file.jpg')
 			];
 			
 		$response = $api->UploadFile('upload-file', $data);
+		
+		print_r($response);
 
 		
