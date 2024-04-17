@@ -27,7 +27,7 @@ Class Api Request Php
 			'age' => 30
 		];
 
-		$response = $api->post('add-patient', $data);
+		$response = $api->post('patient', $data);
 		
 		print_r($response);
 
