@@ -15,6 +15,8 @@ Class Api Request Php
  - **POST:**
 		
 
+		$urlApi = 'http://localhost:8080/';
+
 		$api = new  ApiRequest($urlApi);
 
 		$data = [
@@ -28,6 +30,8 @@ Class Api Request Php
 		$response = $api->post('login-account', $data);
 
  - **PUT:**
+
+		$urlApi = 'http://localhost:8080/';
 
 		$api = new  ApiRequest($urlApi);
 
@@ -43,12 +47,19 @@ Class Api Request Php
 
 
  - **DELET:**
+ 
+		$urlApi = 'http://localhost:8080/';
 
+		$api = new  ApiRequest($urlApi);
+		
 		$response = $api->delete('patients/1');
 
 
  - **Upload File:**
-
+ 
+		$urlApi = 'http://localhost:8080/';
+		$api = new  ApiRequest($urlApi);
+		
 		$data = [
 			'file' => new  CURLFile('path/to/file.jpg')
 			];
